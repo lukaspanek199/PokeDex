@@ -1,7 +1,4 @@
 <?php
-  /**
-   *
-   */
   class Profil
   {
     private $srvname="mysql.spse-net.cz";
