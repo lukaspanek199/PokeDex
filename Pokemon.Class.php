@@ -13,7 +13,7 @@
     }
 
 function NewPokemon(){
-  $conn = new mysqli($servername, $username, $password);
+  $conn = new mysqli($this->servername, $this->username, $this->password,$this->dbname);
 
 if ($conn->connect_error) {
   die("Připojení selhalo: " . $conn->connect_error);
