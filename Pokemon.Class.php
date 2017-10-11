@@ -5,18 +5,19 @@
     private $password="tygr348";
     private $dbname = "paneklu";
 
-    $conn = new mysqli($servername, $username, $password);
-
     function __construct($nazev, $popis, $obrazek){
       $this->nazev = $nazev;
       $this->popis = $popis;
       $this->obrazek = $obrazek;
 
     }
-if ($conn->connect_error) {
-    die("Připojení selhalo: " . $conn->connect_error);
-}
+
 function NewPokemon(){
+  $conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+  die("Připojení selhalo: " . $conn->connect_error);
+}
   $sql = "INSERT INTO pokemoni (nazev, popis, obrazek)
 VALUES ('$this->nazev', '$this->popis','$this->obrazek')";
 
