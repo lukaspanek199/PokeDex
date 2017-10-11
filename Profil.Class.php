@@ -4,7 +4,7 @@
    */
   class Profil
   {
-    $servername="http://mysql.spse-net.cz";
+    $servername=" mysql.spse-net.cz";
     $username="paneklu";
     $pass="tygr348";
     $registername="";
@@ -12,14 +12,14 @@
     $dbname="paneklu";
 
 
-    function __construct(argument)
+    function __construct($registername, $regpass)
     {
-
-    }
-
-    public function Register($registername, $regpass){
       $this->registername = $registername;
       $this->regpass = $regpass;
+    }
+
+    public function Register(){
+
 
       $conn =new mysqli($servername,$username,$pass,$dbname);
       if ($conn->connect_error) {
@@ -27,7 +27,7 @@
       }
       echo "Connected successfully";
 
-      $hashed=hash("ripemd5",$pass);
+      $hashed=hash("ripemd5",$this->regpass);
       $sql="INSERT INTO profily (registername,pass) VALUES ($this->registername,$hashed)";
 
       if ($conn->query($sql) === TRUE) {
