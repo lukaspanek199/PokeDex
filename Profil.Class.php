@@ -4,7 +4,7 @@
    */
   class Profil
   {
-    $servername=" mysql.spse-net.cz";
+    $servername="mysql.spse-net.cz";
     $username="paneklu";
     $pass="tygr348";
     $registername="";
@@ -27,8 +27,8 @@
       }
       echo "Connected successfully";
 
-      $hashed=hash("ripemd5",$this->regpass);
-      $sql="INSERT INTO profily (registername,pass) VALUES ($this->registername,$hashed)";
+      //$hashed=hash("ripemd5",$this->regpass);
+      $sql="INSERT INTO profily (registername,pass) VALUES ($this->registername,$this->regpass)";
 
       if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
