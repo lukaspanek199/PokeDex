@@ -7,7 +7,10 @@
 
     $conn = new mysqli($servername, $username, $password);
 
-    function __construct($argument){
+    function __construct($nazev, $popis, $obrazek){
+      $this->nazev = $nazev;
+      $this->popis = $popis;
+      $this->obrazek = $obrazek;
 
     }
 if ($conn->connect_error) {
@@ -15,7 +18,7 @@ if ($conn->connect_error) {
 }
 function NewPokemon(){
   $sql = "INSERT INTO pokemoni (nazev, popis, obrazek)
-VALUES ('$this->$nazev', '$this->$popis','$this->$obrazek')";
+VALUES ('$this->nazev', '$this->popis','$this->obrazek')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Nový pokémon přidán";
