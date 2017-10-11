@@ -1,9 +1,9 @@
 <?php
   class Pokemon{
-    $servername="mysql.spse-net.cz";
-    $username="paneklu";
-    $password="tygr348";
-    $dbname = "paneklu";
+    private $servername="mysql.spse-net.cz";
+    private $username="paneklu";
+    private $password="tygr348";
+    private $dbname = "paneklu";
 
     $conn = new mysqli($servername, $username, $password);
 
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 function NewPokemon(){
   $sql = "INSERT INTO pokemoni (nazev, popis, obrazek)
-VALUES ($nazev, $popis,$obrazek)";
+VALUES ('$this->$nazev', '$this->$popis','$this->$obrazek')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Nový pokémon přidán";
