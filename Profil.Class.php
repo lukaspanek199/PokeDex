@@ -1,12 +1,12 @@
 <?php
   class Profil
   {
-    private $srvname="mysql.spse-net.cz";
-    private $username="paneklu";
-    private $pass="tygr348";
+    private $srvname="mysql.spse-net.com";
+    private $username="panelu";
+    private $pass="tygr3485";
     private $registername="";
     private $regpass="";
-    private $dbname="paneklu";
+    private $dbname="panelu";
 
 
 
