@@ -1,9 +1,9 @@
 <?php
   class Pokemon{
-    private $servername="mysql.spse-net.cz";
-    private $username="paneklu";
-    private $password="tygr348";
-    private $dbname = "paneklu";
+    private $servername="mysql.spse-net.com";
+    private $username="panelu";
+    private $password="tygr3485";
+    private $dbname = "panelu";
 
     function __construct($nazev, $popis, $obrazek){
       $this->nazev = $nazev;
